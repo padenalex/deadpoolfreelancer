@@ -3,7 +3,9 @@ import App from "./App.vue";
 import router from "./router";
 import store from "./store";
 import vuetify from "./plugins/vuetify";
-
+// @ts-ignore
+import VueKinesis from "vue-kinesis";
+Vue.use(VueKinesis);
 Vue.config.productionTip = false;
 
 new Vue({
@@ -12,3 +14,4 @@ new Vue({
   vuetify,
   render: h => h(App)
 }).$mount("#app");
+

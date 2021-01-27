@@ -1,44 +1,49 @@
 <template>
-  <section class="visualizer">
-    <kinesis-container
-        ref="visualizer"
-        :audio="audio"
-        :playAudio="playing"
-        :duration="500"
-    >
-      <kinesis-audio
-          :audioIndex="60"
-          :strength="1"
-          class="visualizer__background"
-          axis="y"
-      />
-      <div class="visualizer__content">
-        <kinesis-audio tag="h2" :audioIndex="90" type="scale" :strength="50">
-          <h2>Audio effect</h2>
-          <button class="visualizer__play" @click="play">
-            <play v-show="!playing" />
-            <pause v-show="playing" />
-          </button>
-        </kinesis-audio>
-      </div>
+  <div class="parent">
+
+    <h1>Kinesis</h1>
+    <kinesis-container :audio="audio" :playAudio="isPlaying">
+      <button
+          class="button"
+          :class="isPlaying && 'button--playing'"
+          @click="changeState"
+      >hey</button>
+
+      <kinesis-audio :audioIndex="75" type="depth" >
+
+        <kinesis-element >
+          <v-img width="100"
+                 src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"/>
+        </kinesis-element>
+
+      </kinesis-audio>
+
     </kinesis-container>
-  </section>
+
+  </div>
 </template>
 
-<script>
+<script crossorigin="anonymous">
+import { KinesisContainer, KinesisElement } from 'vue-kinesis'
+
 export default {
   components: {
   },
   data() {
     return {
-      audio: 'audio/sounds.mp3',
-      playing: false
+      audio: '/media/temp.ae912083.mp3',
+      isPlaying: false
     }
   },
   methods: {
-    play() {
-      this.playing = !this.playing
+    changeState() {
+      this.isPlaying = !this.isPlaying
     }
   }
 }
 </script>
+
+
+<style>
+
+</style>
