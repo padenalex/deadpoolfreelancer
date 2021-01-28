@@ -1,5 +1,5 @@
 <template>
-  <q-page class="flex flex-center">
+  <q-page class="flex flex-center" style="background-color: #66bb6a">
 
     <div class="main">
       <div class="left">
@@ -18,33 +18,7 @@
       </div>
 
       <div class="right">
-        <div id="q-app">
-          <div class="q-pa-md">
-            <q-card style="max-width: 300px">
-              <q-item>
-                <q-item-section avatar>
-                  <q-skeleton type="QAvatar"></q-skeleton>
-                </q-item-section>
-
-                <q-item-section>
-                  <q-item-label>
-                    <q-skeleton type="text"></q-skeleton>
-                  </q-item-label>
-                  <q-item-label caption>
-                    <q-skeleton type="text"></q-skeleton>
-                  </q-item-label>
-                </q-item-section>
-              </q-item>
-
-              <q-skeleton height="200px" square></q-skeleton>
-
-              <q-card-actions align="right" class="q-gutter-md">
-                <q-skeleton type="QBtn"></q-skeleton>
-                <q-skeleton type="QBtn"></q-skeleton>
-              </q-card-actions>
-            </q-card>
-          </div>
-        </div>
+        <Logo/>
       </div>
       <div class="flex-break q-py-md"></div>
     </div>
@@ -53,11 +27,11 @@
 </template>
 
 <script>
-import SkillBox from "@/components/SkillBox";
-import SkillStep from "@/components/SkillStep";
-import Timeline from "@/components/Timeline";
-import Projects from "@/components/Projects";
-import Heading from "@/components/Heading";
+import SkillStep from "@/components/left/SkillStep";
+import Timeline from "@/components/left/Timeline";
+import Projects from "@/components/left/Projects";
+import Heading from "@/components/left/Heading";
+import Logo from "@/components/right/Logo";
 
 export default {
   name: 'Resume',
@@ -65,7 +39,8 @@ export default {
     Timeline,
     SkillStep,
     Projects,
-    Heading
+    Heading,
+    Logo
   },
 }
 </script>
@@ -79,7 +54,6 @@ export default {
   flex-direction: row;
   flex-wrap: nowrap;
   width: 100%;
-
 }
 .left {
   background-color: #b4f837;
