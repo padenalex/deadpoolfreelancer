@@ -3,16 +3,20 @@
 
     <div class="main">
       <div class="left">
-        <h1>Alex Paden</h1>
 
+        <Heading/>
         <br/>
+
         <SkillStep/>
         <br/>
-        <Timeline/>
 
+        <Timeline/>
+        <br/>
 
         <Projects/>
+
       </div>
+
       <div class="right">
         <div id="q-app">
           <div class="q-pa-md">
@@ -53,13 +57,15 @@ import SkillBox from "@/components/SkillBox";
 import SkillStep from "@/components/SkillStep";
 import Timeline from "@/components/Timeline";
 import Projects from "@/components/Projects";
+import Heading from "@/components/Heading";
 
 export default {
   name: 'Resume',
   components: {
     Timeline,
     SkillStep,
-    Projects
+    Projects,
+    Heading
   },
 }
 </script>
