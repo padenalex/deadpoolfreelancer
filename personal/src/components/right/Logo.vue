@@ -23,6 +23,6 @@ name: "Logo"
 <style scoped>
 .logo {
   text-align: center;
-  background-color: #5e35b1;
+  background-color: #062b2b;
 }
 </style>

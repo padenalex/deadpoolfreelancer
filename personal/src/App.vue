@@ -1,32 +1,11 @@
 
 <template>
-  <q-layout view="hhh lpr fff">
-
-    <q-header elevated class="bg-primary text-white">
-      <q-toolbar>
-        <q-toolbar-title>
-          <q-avatar>
-            <img src="https://cdn.quasar.dev/logo/svg/quasar-logo.svg">
-          </q-avatar>
-          Title
-        </q-toolbar-title>
-      </q-toolbar>
-    </q-header>
+  <q-layout view="hhh lpr fff" class="bg-img">
 
     <q-page-container>
       <Resume />
     </q-page-container>
 
-    <q-footer elevated class="bg-grey-8 text-white">
-      <q-toolbar>
-        <q-toolbar-title>
-          <q-avatar>
-            <img src="https://cdn.quasar.dev/logo/svg/quasar-logo.svg">
-          </q-avatar>
-          Title
-        </q-toolbar-title>
-      </q-toolbar>
-    </q-footer>
 
   </q-layout>
 </template>
@@ -46,5 +25,9 @@ export default {
 }
 </script>
 <style>
-
+.bg-img {
+  background-image: url(https://onlyvectorbackgrounds.com/wp-content/uploads/2019/01/Simple-Vector-Empty-Frame-Background-Purple.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 </style>

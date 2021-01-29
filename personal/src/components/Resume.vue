@@ -1,7 +1,6 @@
 <template>
-  <q-page class="flex flex-center" style="background-color: #66bb6a">
-
-    <div class="main">
+  <q-page class="flex flex-center">
+    <div class="main shadow-box" :class="'shadow-13'">
       <div class="left">
 
         <Heading/>
@@ -19,6 +18,9 @@
 
       <div class="right">
         <Logo/>
+        <Contacts/>
+        <Education/>
+        <Triplebyte/>
       </div>
       <div class="flex-break q-py-md"></div>
     </div>
@@ -32,15 +34,21 @@ import Timeline from "@/components/left/Timeline";
 import Projects from "@/components/left/Projects";
 import Heading from "@/components/left/Heading";
 import Logo from "@/components/right/Logo";
+import Contacts from "@/components/right/Contacts";
+import Education from "@/components/right/Education";
+import Triplebyte from "@/components/right/Triplebyte";
 
 export default {
   name: 'Resume',
   components: {
+    Triplebyte,
+    Education,
+    Contacts,
     Timeline,
     SkillStep,
     Projects,
     Heading,
-    Logo
+    Logo,
   },
 }
 </script>
@@ -48,21 +56,27 @@ export default {
 
 <style>
 .main {
-  margin-left: 10%;
-  margin-right: 10%;
+  margin-left:15%;
+  margin-right:15%;
+  margin-top:6%;
+  margin-bottom:6%;
   display: inline-flex;
   flex-direction: row;
   flex-wrap: nowrap;
   width: 100%;
+  max-height: fit-content;
 }
 .left {
-  background-color: #b4f837;
-  width: 70%
+  background-color: #ffffff;
+  width: 70%;
+  height: inherit;
 }
 
 .right {
-  background-color: #00acc1;
-  width: 30%
+  background-color: #062b2b;
+  width: 30%;
+  height: inherit;
+  color: whitesmoke;
 }
 
 </style>

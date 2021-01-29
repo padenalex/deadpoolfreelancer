@@ -1,12 +1,15 @@
 <template>
   <div id="skill-step">
     <div class="q-pa-md">
-
       <q-stepper
           v-model="step"
           ref="stepper"
           color="primary"
           animated
+          infinite
+          flat
+          bordered=false
+
       >
         <q-step
             :name="1"
